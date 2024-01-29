@@ -19,7 +19,7 @@ import com.expensemanager.fragment.SettingFragment;
 
 public class ContainerActivity extends AppCompatActivity {
 
-//    container
+//    container of fragments
 
     ActivityContainerBinding binding;
     ListFragment listFragment = new ListFragment();
