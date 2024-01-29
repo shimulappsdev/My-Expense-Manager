@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/add_income_back"
+    android:padding="@dimen/_10sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/addIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asul"
+        android:text="Add Your Income"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/theme_color"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/particularName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="@dimen/_1sdp"
+        app:hintTextColor="@color/theme_color"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeColor="@color/theme_color"
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusTopStart="@dimen/_5sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_5sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addIncome">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/incomeParticularName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:hint="Particular"
+            android:inputType="text"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_10ssp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/incomeAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="@dimen/_1sdp"
+        app:hintTextColor="@color/theme_color"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeColor="@color/theme_color"
+        app:endIconMode="clear_text"
+        app:boxCornerRadiusTopStart="@dimen/_5sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_5sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/particularName">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/incomeParticularAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_10ssp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customType"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidthFocused="@dimen/_1sdp"
+        app:hintTextColor="@color/theme_color"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeColor="@color/theme_color"
+        app:endIconMode="clear_text"
+        android:visibility="gone"
+        app:boxCornerRadiusTopStart="@dimen/_5sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_5sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountTypeLayout">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:hint="Custom Type"
+            android:inputType="text"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_10ssp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/accountTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextColor="@color/theme_color"
+        app:boxCornerRadiusTopStart="@dimen/_5sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_5sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_5sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_5sdp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/incomeAmount">
+
+        <AutoCompleteTextView
+            android:id="@+id/accountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:hint="Account Type"
+            android:textSize="@dimen/_10ssp"
+            android:focusable="false"
+            android:textColorHint="@color/theme_color"
+            android:textColor="@color/theme_color"
+            android:inputType="none">
+
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_7sdp"
+        app:cardCornerRadius="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        app:layout_constraintTop_toBottomOf="@+id/customType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/insertIncome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/asul"
+            android:text="Add Income"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:textAllCaps="false"
+            android:background="@color/theme_color"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_7sdp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

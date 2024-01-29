@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_1sdp"
+    app:cardElevation="@dimen/_3sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <ImageView
+            android:id="@+id/iconImg"
+            android:src="@drawable/budget_icon"
+            app:tint="@color/random7"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="0dp"
+            android:background="@color/random12"
+            android:layout_marginStart="@dimen/_2sdp"
+            app:layout_constraintStart_toEndOf="@id/iconImg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/budgetName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="budget name"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_7sdp"
+            app:layout_constraintStart_toEndOf="@id/iconImg"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/clearBtn"
+            android:src="@drawable/clear_item_history_icon"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/budgetTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Budget"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/logo_color_1"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_7sdp"
+            app:layout_constraintStart_toEndOf="@id/iconImg"
+            app:layout_constraintTop_toBottomOf="@id/clearBtn"/>
+
+        <TextView
+            android:id="@+id/budgetHistoryAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/logo_color_1"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/logo_color_1"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clearBtn"/>
+
+        <TextView
+            android:id="@+id/consumeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Consume"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:textColor="@color/theme_color"
+            app:layout_constraintStart_toEndOf="@id/iconImg"
+            app:layout_constraintTop_toBottomOf="@id/budgetTxt"/>
+
+        <TextView
+            android:id="@+id/consumeHistoryAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/theme_color"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/theme_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetTxt"/>
+
+        <TextView
+            android:id="@+id/remainingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Remaining"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/random2"
+            android:layout_marginStart="@dimen/_7sdp"
+            app:layout_constraintStart_toEndOf="@id/iconImg"
+            app:layout_constraintTop_toBottomOf="@id/consumeTxt"/>
+
+        <TextView
+            android:id="@+id/remainingHistoryAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="0000"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/random2"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/random2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/consumeTxt"/>
+
+        <TextView
+            android:id="@+id/budgetHistoryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="01/01/2023"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/random5"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/iconImg"
+            app:layout_constraintTop_toBottomOf="@id/remainingHistoryAmount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/budgetHistoryTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="12:00 PM"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/random5"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/budgetHistoryDate"
+            app:layout_constraintTop_toBottomOf="@id/remainingHistoryAmount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_1sdp"
+    android:layout_marginTop="@dimen/_1sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        >
+        <TextView
+            android:id="@+id/statusBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/white"
+            android:paddingHorizontal="@dimen/_7sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/listTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="List Item Name"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/theme_color"
+            android:includeFontPadding="false"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/statusBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/itemQuantityUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="0 kg"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/random1"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/listTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/listAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/logo_color_1"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/logo_color_1"
+            app:layout_constraintEnd_toStartOf="@id/itemOptionBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/itemOptionBtn"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:tint="@color/random5"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

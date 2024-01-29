@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_1sdp"
+    app:cardElevation="@dimen/_3sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_7sdp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/setBudgetLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+        <TextView
+            android:id="@+id/budgetCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Budget Name"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/theme_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/budgetPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00%"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/theme_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/budgetIndicator"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/budgetIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:trackThickness="@dimen/_4sdp"
+            app:trackCornerRadius="@dimen/_2sdp"
+            app:trackColor="@color/ash"
+            app:indicatorColor="@color/red_ash"
+            android:indeterminate="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetCategory"/>
+
+        <TextView
+            android:id="@+id/budgetTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Budget"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/logo_color_1"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetIndicator"/>
+
+        <TextView
+            android:id="@+id/budgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/logo_color_1"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/logo_color_1"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetIndicator"/>
+
+        <TextView
+            android:id="@+id/consumeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Consume"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/theme_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetTxt"/>
+
+        <TextView
+            android:id="@+id/consumeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/theme_color"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/theme_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetTxt"/>
+
+        <TextView
+            android:id="@+id/remainingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Remaining"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/random2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/consumeTxt"/>
+
+        <TextView
+            android:id="@+id/remainingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="0000"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/random2"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_currency_balance_dashboard"
+            android:drawableTint="@color/random2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/consumeTxt"/>
+            >
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/setBudgetLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="0dp"
+                android:background="@color/red_ash"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/setBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abel"
+                android:text="Set Budget"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/_7ssp"
+                android:drawableBottom="@drawable/set_budget_icon"
+                android:drawableTint="@color/random7"
+                android:drawablePadding="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:layout_constraintStart_toEndOf="@id/view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

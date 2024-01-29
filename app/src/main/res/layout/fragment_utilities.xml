@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.UtilitiesFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/monthYearCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_10sdp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/_2sdp"
+            >
+
+            <LinearLayout
+                android:id="@+id/calendarLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+                <ImageView
+                    android:id="@+id/btnPreviousMonth"
+                    android:src="@drawable/previous_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/monthYearTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arsenal"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    />
+
+                <ImageView
+                    android:id="@+id/btnNextMonth"
+                    android:src="@drawable/next_icon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monthYearCard"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/progressIndicatorLayout"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/utilitiesExpenseIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:trackThickness="@dimen/_5sdp"
+                app:trackColor="@color/ash"
+                app:indicatorColor="@color/random6"
+                android:indeterminate="false"
+                app:trackCornerRadius="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/utilitiesPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abel"
+                android:text="0%"
+                android:textColor="@color/theme_color"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@id/utilitiesExpenseIndicator"
+                app:layout_constraintEnd_toEndOf="@id/utilitiesExpenseIndicator"
+                app:layout_constraintTop_toTopOf="@id/utilitiesExpenseIndicator"
+                app:layout_constraintBottom_toBottomOf="@id/utilitiesExpenseIndicator"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/utilitiesBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Budget"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/logo_color_1"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintStart_toEndOf="@+id/progressIndicatorLayout"
+            app:layout_constraintBottom_toTopOf="@+id/utilitiesExpense"
+            />
+
+        <TextView
+            android:id="@+id/utilitiesBudgetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:drawableLeft="@drawable/taka_currency"
+            android:drawableTint="@color/logo_color_1"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:drawablePadding="@dimen/_1sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/logo_color_1"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/utilitiesExpenseAmount"/>
+
+        <TextView
+            android:id="@+id/utilitiesExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Expense"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/red"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintStart_toEndOf="@id/progressIndicatorLayout"
+            app:layout_constraintBottom_toTopOf="@+id/utilitiesRemaining"/>
+
+        <TextView
+            android:id="@+id/utilitiesExpenseAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:drawableLeft="@drawable/taka_currency"
+            android:drawableTint="@color/red"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:drawablePadding="@dimen/_1sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/red"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/utilitiesRemainingAmount"/>
+
+        <TextView
+            android:id="@+id/utilitiesRemaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="Remaining"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/random2"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintStart_toEndOf="@id/progressIndicatorLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/utilitiesRemainingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:drawableLeft="@drawable/taka_currency"
+            android:drawableTint="@color/random2"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:drawablePadding="@dimen/_1sdp"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/random2"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/customCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/layout_back"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recyclerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abel"
+                    android:text="Utilities Expense List"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/theme_color"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/totalLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="@dimen/_7sdp"
+                    android:layout_gravity="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/expense_fragment_icon"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:scaleType="fitCenter"/>
+
+                    <TextView
+                        android:id="@+id/utilitiesTotalExpense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abel"
+                        android:text="00"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/taka_income_particular"
+                        android:drawableTint="@color/theme_color"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/utilitiesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/expense_layout"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/noExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/abel"
+                android:text="No Expense Added"
+                android:textColor="@color/ash"
+                android:textSize="@dimen/_20ssp"
+                android:visibility="gone"
+                app:layout_constraintVertical_bias=".45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

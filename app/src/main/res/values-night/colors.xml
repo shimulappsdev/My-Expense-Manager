@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="theme_color">#8e0438</color>
+    <color name="primary_color">#b8275e</color>
+    <color name="red">#C70039</color>
+    <color name="cnb_back">#B4FF6666</color>
+    <color name="logo_color_1">#ec6503</color>
+    <color name="logo_color_2">#71ff5c</color>
+    <color name="orange">#E55604</color>
+    <color name="orange_ash">#D6B4A0</color>
+    <color name="trans">#BC191919</color>
+    <color name="edit_text">#945A5A5A</color>
+    <color name="form_color">#4f4e4f</color>
+    <color name="ash">#D1D1D1</color>
+    <color name="off_white">#FBF7EB</color>
+    <color name="hints_color">#959595</color>
+    <color name="red_ash">#BD7979</color>
+    <color name="tab_back">#F28E0438</color>
+    <color name="warning">#E6A935</color>
+
+    <!--    Random color    -->
+    <color name="random1">#419197</color>
+    <color name="random2">#79AC78</color>
+    <color name="random3">#713ABE</color>
+    <color name="random4">#26577C</color>
+    <color name="random5">#4F709C</color>
+    <color name="random6">#A73121</color>
+    <color name="random7">#9A3B3B</color>
+    <color name="random8">#9EB384</color>
+    <color name="random9">#C23373</color>
+    <color name="random10">#A2678A</color>
+    <color name="random11">#99662549</color>
+    <color name="random12">#99313866</color>
+    <color name="random13">#994E6C50</color>
+    <color name="random14">#99016A70</color>
+    <color name="random15">#99D14D72</color>
+</resources>

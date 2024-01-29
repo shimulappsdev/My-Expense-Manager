@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_1sdp"
+    app:cardElevation="@dimen/_3sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        >
+
+        <TextView
+            android:id="@+id/imgText"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:text="A"
+            android:fontFamily="@font/arsenal"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/oval_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/incomeParticularName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="particular name"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="@dimen/_7sdp"
+            app:layout_constraintStart_toEndOf="@id/imgText"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/incomeType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="particular Category"
+            android:textColor="@color/random2"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginStart="@dimen/_7sdp"
+            app:layout_constraintStart_toEndOf="@id/imgText"
+            app:layout_constraintTop_toBottomOf="@+id/incomeParticularName"/>
+
+        <TextView
+            android:id="@+id/particularDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="01/01/2023"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/random5"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/imgText"
+            app:layout_constraintTop_toBottomOf="@id/incomeType"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/particularTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="12:00 PM"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/random5"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toEndOf="@id/particularDate"
+            app:layout_constraintTop_toBottomOf="@id/incomeType"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/clearBtn"
+            android:src="@drawable/clear_item_history_icon"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/particularAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abel"
+            android:text="00"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/logo_color_1"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/taka_income_particular"
+            android:drawableTint="@color/logo_color_1"
+            android:drawablePadding="@dimen/_1sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clearBtn"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
