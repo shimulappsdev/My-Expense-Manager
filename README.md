@@ -1,7 +1,8 @@
-<h2>My Expense Manager</h2></br>
+<h1>My Expense Manager</h1></br>
+<h3>Dashboard</h3></br>
 <p align="center">
   <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/6a7dc227-8259-4760-aa2e-8aaf4dea635f" width="400" height = "820" >
-</p>
+</p></br>
 
 <p align="center">
   <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/5d672927-3b52-4cf5-833b-0452448f6eaa" width="400" height = "820" >
