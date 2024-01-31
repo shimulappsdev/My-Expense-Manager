@@ -1,5 +1,6 @@
 <h1>My Expense Manager</h1></br>
-<h3>*Dashboard</h3></br>
+
+<h3 style="text-align: Start; font-weight: bold; color: #007bff;">Dashboard</h3>
 <p align="center">
   <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/6a7dc227-8259-4760-aa2e-8aaf4dea635f" width="400" height = "820" >
 </p></br>
