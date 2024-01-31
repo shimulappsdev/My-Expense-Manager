@@ -1,6 +1,6 @@
 <h2>My Expense Manager</h2></br>
 <p align="center">
-  <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/6a7dc227-8259-4760-aa2e-8aaf4dea635f" width="411" height = "731" >
+  <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/6a7dc227-8259-4760-aa2e-8aaf4dea635f" width="400" height = "800" >
 </p>
 
 <p align="center">
@@ -31,10 +31,6 @@
 <p align="center">
   <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/ae2bdd4f-2014-42ef-a3ee-a906830d063c" width="411" height = "731" >
   <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/0988a555-f472-4e80-b4e3-ae402c11c192" width="411" height = "731" >
-</p>
-
-<p align="center">
-  <img src="https://github.com/shimulappsdev/My-Expense-Manager/assets/118614364/8e0a98e4-77b1-4ab4-b202-1046884e2112" width="411" height = "731" >
 </p>
 
 
